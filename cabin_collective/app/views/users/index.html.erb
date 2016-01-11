@@ -1,2 +1,21 @@
-<h1>Users#index</h1>
+<h1>Here is the welcome page that will list all users</h1>
 <p>Find me in app/views/users/index.html.erb</p>
+
+<h2> Users Index </h2>
+
+<%= @users.each do |user| %>
+	<tr>
+	<td>Email: <%= user.email %></td>
+	</tr>
+	<br>
+	<br>
+	<tr>
+	<td>Password Digest: <%= user.password_digest %></td>
+	</tr>
+	<br>
+	<br>
+<% end %>
+
+<!-- link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %> -->
+
+
