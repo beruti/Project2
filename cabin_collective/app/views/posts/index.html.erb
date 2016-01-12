@@ -1,2 +1,19 @@
 <h1>Posts#index</h1>
 <p>Find me in app/views/posts/index.html.erb</p>
+	
+	<%= render "/layouts/header" %>
+
+<% @posts.each do |post| %>
+	<br>
+	<br>
+	<br>
+	<img src="<%= post.image %>">
+	<%= post.name %>
+	<br>
+	<br>
+	This is the id of the user who posted this: <%= post.user_id %>
+	<br>
+	<%= post.likes.count %>
+	<%=link_to 'like',"/posts/#{post.id}/like" %>
+	<%= post.description %>	
+<%end%>

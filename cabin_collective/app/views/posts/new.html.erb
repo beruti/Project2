@@ -1,2 +1,30 @@
 <h1>Posts#new</h1>
 <p>Find me in app/views/posts/new.html.erb</p>
+
+<!-- This should be a form allowing user to create a new post-->
+	<h1> This is the post creation form in posts/new.html.erb </h1>
+
+	#<%= form_for @post do |newpost| %>
+
+	<!-- REMEMBER TO VALIDATE/ERROR CHECK -->
+
+	<!-- include all user entry fields -->
+
+	<div class="field">
+		<%= newpost.label :name %>
+		<%= newpost.text_field :name %>
+	</div>
+	<div class="field">
+		<%= newpost.label :description %>
+		<%= newpost.text_field :description %>
+	</div>
+	<div class="field">
+		<%= newpost.label :image %>
+		<%= newpost.text_field :image %>
+	</div>
+
+	<div class="actions">
+		<%= newpost.submit %>
+	</div>
+
+	<% end %>

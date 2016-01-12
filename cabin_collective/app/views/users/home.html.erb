@@ -1,0 +1,36 @@
+<!-- will have link to render form for creating new link--> 
+<!-- will display user info - their posts, their likes, create new posts -->
+
+
+<!-- their posts-->
+	<p> Posts </p>
+	<br>
+
+	<% @currentUserPosts.each do |post| %>
+
+	<img src="<%=post.image %>">
+	Name: <%= post.name %>
+	Description: <%= post.description %>
+
+	<%end%>
+
+	<br>
+	<p> Likes </p>
+	<br>
+
+	<!--Post.find(params[:id]).likes.create(user_id: current_user.id) -->
+
+	<% @currentUserLikes.each do |like| %>
+
+	<img src="<%=like.post.image %>"/>
+	<br>
+	<%=	like.post.name %>
+	<br>
+	<%= like.post.description %>
+
+	<%end%>
+
+<!-- link to new post create form-->
+	
+	<%= link_to "Create New Post",  "/posts/new" %>
+

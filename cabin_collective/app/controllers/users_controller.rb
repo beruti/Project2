@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   def show
   end
 
+
   def edit
   end
 
@@ -29,6 +30,12 @@ class UsersController < ApplicationController
 
   def update
   end
+
+  def home
+    @currentUserPosts = User.find(current_user.id).posts.where(user_id: current_user.id)
+    @currentUserLikes = Like.where(user_id: current_user.id)
+  end
+
 end
 
 

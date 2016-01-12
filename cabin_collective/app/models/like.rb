@@ -1,6 +1,8 @@
 class Like < ActiveRecord::Base
+	# belongs_to :post, :class_name => 'User'
 	belongs_to :post
-	validates :user_id, presence: true, uniqueness: true, default: current_user.id
+	belongs_to :user
+	#validates :user_id, presence: true, uniqueness: true, default: current_user.id
 	# attribute :user_id, :integer, default: session[:user_id] 
 end
 
