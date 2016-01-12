@@ -1,18 +1,27 @@
 <!-- will have link to render form for creating new link--> 
 <!-- will display user info - their posts, their likes, create new posts -->
 
-
+		<h1> This is for logged in users only </h1>
 <!-- their posts-->
 	<p> Posts </p>
 	<br>
 
 	<% @currentUserPosts.each do |post| %>
 
-	<img src="<%=post.image %>">
+	<img src="<%=post.image %>", style="display: block;">
 	Name: <%= post.name %>
+	<br>
+	<br>
 	Description: <%= post.description %>
 
+	<br>
+	<p>Edit:
+	<%= link_to post, edit_post_path(post) %> </p>
+	<br>
+	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
 	<%end%>
+
 
 	<br>
 	<p> Likes </p>
@@ -22,7 +31,7 @@
 
 	<% @currentUserLikes.each do |like| %>
 
-	<img src="<%=like.post.image %>"/>
+	<img src="<%=like.post.image %>" style="display: block;"/>
 	<br>
 	<%=	like.post.name %>
 	<br>
@@ -31,6 +40,10 @@
 	<%end%>
 
 <!-- link to new post create form-->
-	
+	<br>
+	<br>
 	<%= link_to "Create New Post",  "/posts/new" %>
+	<br>
+	<br>
+	<%= link_to "See the Collective", "/posts" %>
 
