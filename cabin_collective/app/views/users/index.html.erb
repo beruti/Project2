@@ -5,16 +5,20 @@
 
 <%= @users.each do |user| %>
 	<tr>
-	<td>Email: <%= user.email %></td>
+		<td>
+		Email: <%= user.email %>
+		</td>
 	</tr>
-	<br>
-	<br>
+	<br><br>
 	<tr>
-	<td>Password Digest: <%= user.password_digest %></td>
+		<td>
+		Password Digest: <%= user.password_digest %>
+		</td>
 	</tr>
-	<br>
-	<br>
-	<td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<br><br>
+	<td>
+		<%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</td>
 <% end %>
 
 

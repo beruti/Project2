@@ -7,6 +7,13 @@ class PostsController < ApplicationController
     end 
     # IS BREAKING SITE even when user logged in 
     @posts= Post.all
+    @posts = @posts.sort_by{ |post| post.likes.count }.reverse!
+
+    # What association are you trying to draw out?
+    # I am trying to print the user id of whoever liked the post to the page
+    # WHY?
+    # Doing so in order to identify the row in the like table so I can remove this specific one 
+
   end
 
   def new
@@ -71,11 +78,24 @@ class PostsController < ApplicationController
   end  
 
   def like_post
-    Post.find(params[:id]).likes.create(user_id: current_user.id)
 
-    redirect_to "/posts"
-    # need css/whatever trick that means you stay at same point on page
-    # need to limit number of likes per post to one per user - validation!
+    if Post.find(params[:id]).likes.where(user_id: current_user.id).length == 0 
+  
+      # Post.find(params[:id]).likes.create(user_id: current_user.id)
+      current_user.likes.create(post_id: params[:id])
+  
+      redirect_to "/posts"
+    else
+
+      current_user.likes.where(post_id: params[:id]).destroy_all
+
+      # Post.find(params[:id]).likes.delete(user_id: current_user.id, post_id: params[:id])
+      # destroy breaks it
+  
+      redirect_to "/posts"
+      # need css/whatever trick that means you stay at same point on page
+      # need to limit number of likes per post to one per user - validation!
+    end
   end
   
 end

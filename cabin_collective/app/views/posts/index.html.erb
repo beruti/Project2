@@ -10,9 +10,11 @@
 	<%= post.name %>
 	<br>
 	<br>
-	This is the id of the user who posted this: <%= post.user_id %>
 	<br>
 	<%= post.likes.count %>
-	<%=link_to 'like',"/posts/#{post.id}/like" %>
+	<br>
+
+	<%=link_to has_liked?(post),"/posts/#{post.id}/like" %>
 	<%= post.description %>	
 <%end%>
+
