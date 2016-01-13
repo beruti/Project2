@@ -1,6 +1,6 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-		
+
+<img src="/assets/logo.png" style="width: 70px; height: 70px;"> 
+<h1> Cabin Collective </h1>		
 
 <% @posts.each do |post| %>
 	<br>
@@ -11,10 +11,10 @@
 	<br>
 	<br>
 	<br>
-	<%= post.likes.count %>
-	<br>
+	<p><%= post.likes.count%><p>  </p><%= pluralize_without_count(post.likes.count) %></p>
 
 	<%=link_to has_liked?(post),"/posts/#{post.id}/like" %>
+	<br>
 	<%= post.description %>	
 <%end%>
 

@@ -31,6 +31,16 @@ class ApplicationController < ActionController::Base
 
   end
 
+ helper_method :pluralize_without_count
+
+ def pluralize_without_count(count)
+   if count == 1 #? "a #{noun}#{text}" : "#{noun.pluralize}#{text}"
+     'like'
+   else
+     'likes'
+   end
+ end
+
   def logged_in?
   	!!current_user
   end

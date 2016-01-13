@@ -74,7 +74,7 @@ class PostsController < ApplicationController
       # but this has not deleted all relative dependencies - so now users/home is broken
 
       #redirect
-      redirect_to '/users/home'
+      redirect_to '/users/#{current_user.id}/home'
   end  
 
   def like_post

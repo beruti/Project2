@@ -9,7 +9,7 @@
 		<p>not logged in</p>
 
 		<% end %>
-		<%= link_to "Home", "users/#{current_user.id}/home" %> |
+		<%= link_to "Home", "/users/#{current_user.id}/home" %> |
 		<%= link_to "Logout", logout_path, method: :delete %>
 	<% end %>
 </div>

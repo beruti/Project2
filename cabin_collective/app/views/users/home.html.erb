@@ -15,10 +15,9 @@
 	Description: <%= post.description %>
 
 	<br>
-	<p>Edit:
-	<%= link_to post, edit_post_path(post) %> </p>
-	<br>
-	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<p>
+	<%= link_to "Edit Post", edit_post_path(post) %> </p>
+	<p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 
 	<%end%>
 
