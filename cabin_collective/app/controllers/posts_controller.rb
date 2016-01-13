@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
   def edit
     #bring up the selected post when button clicked
-    # make form in views
+    #make form in views
     @post = Post.find(params[:id])
 
   end
@@ -30,6 +30,7 @@ class PostsController < ApplicationController
   def show
     # route already in place by resources 
     #   post GET    /posts/:id(.:format)          posts#show
+    @post = Post.find(params[:id])
   end
 
   def create
@@ -67,6 +68,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    puts params
       @post = Post.find(params[:id])
 
       # destroy the database row
@@ -98,4 +100,25 @@ class PostsController < ApplicationController
     end
   end
   
+  def archived
+    @post = Post.find(params[:id])
+    @post.update(archived: true)
+    redirect_to "/posts/build", notice: 'Build This Thing!' 
+  end
+
+  def unarchived
+    @post = Post.find(params[:id])
+    @post.update(archived: false)
+    redirect_to "/posts", notice: 'Back to the drawing board!'
+  end
+
+  def build
+    @posts = Post.all
+  end
+
+end
+
+private
+  def post_params
+  params.require(:post).permit(:name, :description, :image)
 end

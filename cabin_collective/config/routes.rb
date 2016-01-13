@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+  get '/posts/build'
+
   get 'secret/public_info'
 
   get 'secret/secret'
+
+  resources :charges
 
   resources :posts
 
@@ -19,11 +23,11 @@ Rails.application.routes.draw do
   #create a home page for the user
   get '/users/:id/home', to: 'users#home'
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  post '/posts/:id/archive', to: 'posts#archived', as: :archive
 
-  # You can have the root of your site routed with "root"
+  post '/posts/:id/unarchive', to: 'posts#unarchived', as: :unarchive
+
+
   root 'sessions#new'
-
 
 end

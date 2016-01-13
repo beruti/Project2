@@ -6,7 +6,7 @@
 	<br>
 	<br>
 	<br>
-	<img src="<%= post.image %>">
+	<a href="/posts/<%= post.id%>"><img src="<%= post.image %>"></a>
 	<%= post.name %>
 	<br>
 	<br>
@@ -16,5 +16,14 @@
 	<%=link_to has_liked?(post),"/posts/#{post.id}/like" %>
 	<br>
 	<%= post.description %>	
+	<%if post.likes.count > 1 %>
+		<% if (post.archived == false) %>
+			<%= link_to "Build List", archive_path(post), method: :post %>
+		<% else %>
+			<%= link_to "Unarchive List", unarchive_path(post), method: :post%>
+		<% end %>
+	<% end %>
+
+
 <%end%>
 
