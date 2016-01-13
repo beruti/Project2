@@ -16,8 +16,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save 
-    
-    redirect_to "/posts"
+      session[:user_id] = @user.id
+      redirect_to posts_path
     else 
       render 'new'
     end
@@ -25,7 +25,6 @@ class UsersController < ApplicationController
 
   def show
   end
-
 
   def edit
   end
@@ -46,9 +45,16 @@ class UsersController < ApplicationController
   end
 
   def home
-    @currentUserPosts = User.find(current_user.id).posts.where(user_id: current_user.id)
-    @currentUserLikes = Like.where(user_id: current_user.id)
+    puts params[:current_user]
+   @currentUserPosts = User.find(current_user.id).posts.where(user_id: current_user.id)
+   @currentUserLikes = Like.where(user_id: current_user.id)
+    #@currentUserPosts = User.find(params[:id]).posts.where(user_id: (params[:id])
+    #@currentUserLikes = Like.where(user_id: (params[:id]))
   end
+
+  #def set_user
+  #  @user = User.find(params[:id])
+  #end
 
 end
     

@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
-
+  
   def index
 
-    #unless logged_in?
-    #  redirect_to "/sessions/new"
-    #end 
+    unless logged_in?
+     redirect_to "/sessions/new"
+    end 
     # IS BREAKING SITE even when user logged in 
     @posts= Post.all
   end

@@ -1,3 +1,15 @@
-<div class="header"> 
-	<%= link_to "User Home", "/users/home" %>
+<div class="header">
+	<% if current_user %> 
+		<% if current_user %>
+
+		<%= current_user.email %>
+
+		<% else %>
+
+		<p>not logged in</p>
+
+		<% end %>
+		<%= link_to "Home", "users/#{current_user.id}/home" %> |
+		<%= link_to "Logout", logout_path, method: :delete %>
+	<% end %>
 </div>
