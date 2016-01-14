@@ -1,0 +1,34 @@
+<div>
+	<div class="row">
+		<div class="medium-6 medium-centered large-4 large-centered columns">
+			<%= form_for @user do |f| %>
+				<div class="row column log-in-form">
+					<h4 class="text-center"> Sign Up For An Account</h4>	
+					<% if @user.errors.any? %>
+						<div class="error messages">
+							<h2> Form invalid </h2>
+							<ul>
+							 <% for message in @user.errors.	full_messages %>
+							 <li><%= message %></li>
+							 <%end%>	
+							</ul>
+						</div>
+					<% end %>
+					<!-- include all user entry fields -->
+				
+					<%= f.label :email %>
+					<%= f.email_field :email, :required => true %>
+				
+					<%= f.label :password %>
+					<%= f.password_field :password %>
+				
+					<%= f.label :password_confirmation %>
+					<%= f.password_field :password_confirmation %>
+				</div>
+				
+					<%= f.submit%>
+				
+			<% end %>	
+		</div>
+	</div>
+</div>	

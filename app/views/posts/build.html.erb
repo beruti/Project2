@@ -1,0 +1,21 @@
+
+<%#= @posts.each do %>
+
+<p> print in here each and every post that has archived status as true</p>
+
+<% @posts.each do |post| %>
+	<% if post['archived'] %>
+		<img src="<%= post.image %>">
+		<%= post.name %>
+		<br>
+		<%= link_to "Unarchive Project", unarchive_path(post), method: :post%>
+		<br>
+		<%= link_to "Contribute", "/charges/new" %>
+	<% end %>
+<%end%>
+<br>
+<a href="/posts">Back to the Collective</a>
+
+<!-- need to ensure that route is CORRECTLY handled by an action - is routing to show currently -->
+
+
