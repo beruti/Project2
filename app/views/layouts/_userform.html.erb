@@ -1,4 +1,4 @@
-<div>
+
 	<div class="row">
 		<div class="medium-6 medium-centered large-4 large-centered columns">
 			<%= form_for @user do |f| %>
@@ -15,20 +15,22 @@
 						</div>
 					<% end %>
 					<!-- include all user entry fields -->
-				
+					<div class="text-center">
 					<%= f.label :email %>
 					<%= f.email_field :email, :required => true %>
-				
+					</div>
+					<div class="text-center">
 					<%= f.label :password %>
 					<%= f.password_field :password %>
-				
+					</div>
+					<div class="text-center">
 					<%= f.label :password_confirmation %>
 					<%= f.password_field :password_confirmation %>
+					</div>
 				</div>
-				
+					<div class="text-center">
 					<%= f.submit%>
-				
+					</div>
 			<% end %>	
 		</div>
 	</div>
-</div>	

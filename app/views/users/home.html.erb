@@ -1,9 +1,9 @@
 <!-- will have link to render form for creating new link--> 
 <!-- will display user info - their posts, their likes, create new posts -->
 
-		<h1> This is for logged in users only </h1>
-<!-- their posts-->
-	<p> Posts </p>
+		
+
+	<h4 style="text-align: center;"> Posts You Have Made </h4>
 	<br>
 
 	<% @currentUserPosts.each do |post| %>
@@ -23,14 +23,14 @@
 
 
 	<br>
-	<p> Likes </p>
+	<h4 style="text-align: center;"> Things You Like </h4>
 	<br>
 
 	<!--Post.find(params[:id]).likes.create(user_id: current_user.id) -->
 
 	<% @currentUserLikes.each do |like| %>
 
-	<img src="<%=like.post.image %>" style="display: block;"/>
+	<img src="<%= like.post.image %>" style="display: block;"/>
 	<br>
 	<%=	like.post.name %>
 	<br>
@@ -40,9 +40,8 @@
 
 <!-- link to new post create form-->
 	<br>
+	<h5 style="text-align: center;"><%= link_to "Create New Post",  "/posts/new" %></h5>
 	<br>
-	<%= link_to "Create New Post",  "/posts/new" %>
 	<br>
-	<br>
-	<%= link_to "See the Collective", "/posts" %>
+	<h5 style="text-align: center;"><%= link_to "See the Collective", "/posts" %></h5>
 

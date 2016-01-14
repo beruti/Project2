@@ -1,4 +1,3 @@
-<h1> This is the post creation form </h1>
 
 <%= form_for @post do |newpost| %>
 
@@ -6,20 +5,20 @@
 
 <!-- include all user entry fields -->
 
-<div class="field">
+<div class="text-center">
 	<%= newpost.label :name %>
 	<%= newpost.text_field :name, :required => true%>
 </div>
-<div class="field">
+<div class="text-center">
 	<%= newpost.label :description %>
 	<%= newpost.text_field :description, :required => true%>
 </div>
-<div class="field">
+<div class="text-center">
 	<%= newpost.label :image %>
 	<%= newpost.text_field :image, :required => true%>
 </div>
 
-<div class="actions">
+<div class="text-center">
 	<%= newpost.submit %>
 </div>
 

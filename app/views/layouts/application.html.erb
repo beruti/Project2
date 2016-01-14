@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
     <%= stylesheet_link_tag    "application" %>
@@ -12,10 +12,12 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-
+  <body class="<%= controller_name %>">
+    <div style=" width: 100%; display: block;">
     <%= render "/layouts/header" %>
-
+    </div>
+    <img src="/assets/logo.png" style="margin:0 auto; width: 10%; display: block;"> 
+    <h1 style="text-align: center"> Cabin Collective </h1>
     <%= yield %>
 
   </body>

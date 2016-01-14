@@ -1,27 +1,21 @@
 
-<img src="/assets/logo.png" style="width: 70px; height: 70px;"> 
-<h1> Cabin Collective </h1>		
 
 <% @posts.each do |post| %>
 	<br>
 	<br>
 	<br>
 	<a href="/posts/<%= post.id%>"><img src="<%= post.image %>"></a>
-	<%= post.name %>
+	<h5><%= post.name %></h5>
 	<br>
+	<h6><%= post.description %></h6>
 	<br>
-	<br>
-	<p><%= post.likes.count%><p>  </p><%= pluralize_without_count(post.likes.count) %></p>
-
+	<p><%= post.likes.count%><span> </span><%= pluralize_without_count(post.likes.count) %></p>
 	<%=link_to has_liked?(post),"/posts/#{post.id}/like" %>
 	<br>
-	<%= post.description %>	
-
 	<!-- Condition for whether to build or not - set level of consensus through likes-->
+	<br>
 	<%if post.likes.count > 1 %>
-		<% if (post.archived == true) %>
-			<%= link_to "Build List", archive_path(post), method: :post %>
-		<%end%>
+			<p><%= link_to "Build List", archive_path(post), method: :post %></p>
 	<%end%>
 
 

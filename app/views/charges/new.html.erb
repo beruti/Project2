@@ -1,34 +1,22 @@
 <%= form_tag charges_path do %>
- 
-          <input class="form-control"
-                 type="number"
-                 id="custom-donation-amount"
-                 placeholder="£50.00"
-                 min="10.00"
-                 step="5.00"/>
-          <script src="https://checkout.stripe.com/checkout.js"></script>
-          <button id="customButton ">Contribute</button>
-          <script>
-            var handler = StripeCheckout.configure({
-              key: 'pk_test_ppailxxxxxxxxxxxxxxxxxxx',
-              image: '/square-image.png',
-              token: function(token) {
-                // Use the token to create the charge with a server-side script.
-                // You can access the token ID with `token.id`
-              }
-            });
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <p id="amount">
+      <span>Amount: <span id="customamount">£5.00</span></span>
+    </p>
+  </article>
 
-            document.getElementById('customButton').addEventListener('click', function(e) {
-              // This line is the only real modification...
-              var amount = $("#custom-donation-amount").val() * 100;
-              handler.open({
-                name: 'Demo Site',
-                description: 'Some donation',
-                // ... aside from this line where we use the value.
-                amount: amount
-              });
-              e.preventDefault();
-            });
-          </script>
+<script> 
+document.getElementById("customamount").innerHTML = "bang bang";
+</script>
 
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="500"
+          data-locale="auto"></script>
 <% end %>
