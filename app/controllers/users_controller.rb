@@ -48,13 +48,7 @@ class UsersController < ApplicationController
     puts params[:current_user]
    @currentUserPosts = User.find(current_user.id).posts.where(user_id: current_user.id)
    @currentUserLikes = Like.where(user_id: current_user.id)
-    #@currentUserPosts = User.find(params[:id]).posts.where(user_id: (params[:id])
-    #@currentUserLikes = Like.where(user_id: (params[:id]))
   end
-
-  #def set_user
-  #  @user = User.find(params[:id])
-  #end
 
 end
     

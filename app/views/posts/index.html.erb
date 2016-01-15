@@ -1,23 +1,19 @@
-
-
 <% @posts.each do |post| %>
-	<br>
-	<br>
-	<br>
+	<br><br><br>
 	<a href="/posts/<%= post.id%>"><img src="<%= post.image %>"></a>
 	<h5><%= post.name %></h5>
 	<br>
 	<h6><%= post.description %></h6>
 	<br>
-	<p><%= post.likes.count%><span> </span><%= pluralize_without_count(post.likes.count) %></p>
+	<p>
+		<%= post.likes.count%><span> 
+		</span><%= pluralize_without_count(post.likes.count) %>
+	</p>
 	<%=link_to has_liked?(post),"/posts/#{post.id}/like" %>
-	<br>
 	<!-- Condition for whether to build or not - set level of consensus through likes-->
-	<br>
+	<br><br>
 	<%if post.likes.count > 1 %>
-			<p><%= link_to "Build List", archive_path(post), method: :post %></p>
+		<p><%= link_to "Build List", archive_path(post), method: :post %></p>
 	<%end%>
-
-
 <%end%>
 

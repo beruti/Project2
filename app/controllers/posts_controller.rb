@@ -1,19 +1,12 @@
 class PostsController < ApplicationController
   
   def index
-
     unless logged_in?
      redirect_to "/sessions/new"
     end 
-    # IS BREAKING SITE even when user logged in 
     @posts= Post.all
+    #ordering by most likes
     @posts = @posts.sort_by{ |post| post.likes.count }.reverse!
-
-    # What association are you trying to draw out?
-    # I am trying to print the user id of whoever liked the post to the page
-    # WHY?
-    # Doing so in order to identify the row in the like table so I can remove this specific one 
-
   end
 
   def new
@@ -21,10 +14,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    #bring up the selected post when button clicked
-    #make form in views
     @post = Post.find(params[:id])
-
   end
 
   def show
@@ -34,7 +24,6 @@ class PostsController < ApplicationController
   end
 
   def create
-
     #sanitize the routes ( only allow certain fields )
     sanitized = params.require(:post).permit(:name, :description , :image)
 
@@ -51,9 +40,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    #what do you want to do to the post
-    #all changes are made by user - this is stored in params in page before clickthrough
-    #sanitize the routes ( only allow certain fields )
     sanitized = params.require(:post).permit(:name, :description , :image)
 
     # create a new post object with the params from the request
@@ -68,7 +54,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    
       puts "/users/#{current_user.id}/home"
 
       @post = Post.find(params[:id])
@@ -90,15 +75,9 @@ class PostsController < ApplicationController
   
       redirect_to "/posts"
     else
-
       current_user.likes.where(post_id: params[:id]).destroy_all
-
-      # Post.find(params[:id]).likes.delete(user_id: current_user.id, post_id: params[:id])
-      # destroy breaks it
   
       redirect_to "/posts"
-      # need css/whatever trick that means you stay at same point on page
-      # need to limit number of likes per post to one per user - validation!
     end
   end
   

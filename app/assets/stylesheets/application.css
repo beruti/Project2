@@ -19,4 +19,12 @@
 .users {
 	background-image: url("http://ecx.images-amazon.com/images/I/910n4Eia51L.jpg");
 	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+}
+main{
+	margin: 0 auto;
+	width:96%;
+	height: 96%;
 }

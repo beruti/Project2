@@ -6,7 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -18,7 +18,7 @@
     </div>
     <img src="/assets/logo.png" style="margin:0 auto; width: 10%; display: block;"> 
     <h1 style="text-align: center"> Cabin Collective </h1>
-    <%= yield %>
+    <main><%= yield %></main>
 
   </body>
 </html>

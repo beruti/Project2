@@ -1,3 +1,4 @@
+#preset from stripe except for currency
 class ChargesController < ApplicationController
 
 	def new

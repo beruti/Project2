@@ -1,47 +1,38 @@
 <!-- will have link to render form for creating new link--> 
 <!-- will display user info - their posts, their likes, create new posts -->
 
-		
-
 	<h4 style="text-align: center;"> Posts You Have Made </h4>
 	<br>
-
 	<% @currentUserPosts.each do |post| %>
-
-	<img src="<%=post.image %>", style="display: block;">
-	Name: <%= post.name %>
-	<br>
-	<br>
-	Description: <%= post.description %>
-
-	<br>
-	<p>
-	<%= link_to "Edit Post", edit_post_path(post) %> </p>
-	<p><%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-
+		<img src="<%=post.image %>", style="display: block;">
+		Name: <%= post.name %>
+		<br>
+		<br>
+		Description: <%= post.description %>
+		<br>
+		<p>
+		<%= link_to "Edit Post", edit_post_path(post) %> </p>
+		<p><%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm:'Are you sure?' } %></p>
 	<%end%>
-
-
 	<br>
 	<h4 style="text-align: center;"> Things You Like </h4>
 	<br>
-
-	<!--Post.find(params[:id]).likes.create(user_id: current_user.id) -->
-
 	<% @currentUserLikes.each do |like| %>
-
-	<img src="<%= like.post.image %>" style="display: block;"/>
-	<br>
-	<%=	like.post.name %>
-	<br>
-	<%= like.post.description %>
-
+		<img src="<%= like.post.image %>" style="display: block;"/>
+		<br>
+		<%=	like.post.name %>
+		<br>
+		<%= like.post.description %>
 	<%end%>
 
-<!-- link to new post create form-->
 	<br>
-	<h5 style="text-align: center;"><%= link_to "Create New Post",  "/posts/new" %></h5>
+	<!-- link to new post create form-->
+	<h5 style="text-align: center;">
+	<%= link_to "Create New Post",  "/posts/new" %>
+	</h5>
 	<br>
 	<br>
-	<h5 style="text-align: center;"><%= link_to "See the Collective", "/posts" %></h5>
+	<h5 style="text-align: center;">
+	<%= link_to "See the Collective", "/posts" %>
+	</h5>
 

@@ -1,21 +1,9 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
- 
-
-  #before_action :require_login
-#
-  #private
-#
 
   protect_from_forgery with: :exception
 
   helper_method :current_user
-  # public
-  #def current_user	
-  #	@current_user ||= User.find(session[:user_id]) if session[:user_id]
-  #end	
-
+ 
   def current_user
       @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
@@ -34,7 +22,7 @@ class ApplicationController < ActionController::Base
  helper_method :pluralize_without_count
 
  def pluralize_without_count(count)
-   if count == 1 #? "a #{noun}#{text}" : "#{noun.pluralize}#{text}"
+   if count == 1 
      'like'
    else
      'likes'

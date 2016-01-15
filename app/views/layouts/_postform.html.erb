@@ -1,25 +1,19 @@
 
 <%= form_for @post do |newpost| %>
-
-<!-- REMEMBER TO VALIDATE/ERROR CHECK -->
-
-<!-- include all user entry fields -->
-
-<div class="text-center">
-	<%= newpost.label :name %>
-	<%= newpost.text_field :name, :required => true%>
-</div>
-<div class="text-center">
-	<%= newpost.label :description %>
-	<%= newpost.text_field :description, :required => true%>
-</div>
-<div class="text-center">
-	<%= newpost.label :image %>
-	<%= newpost.text_field :image, :required => true%>
-</div>
-
-<div class="text-center">
-	<%= newpost.submit %>
-</div>
+	<div class="text-center">
+		<%= newpost.label :name %>
+		<%= newpost.text_field :name, :required => true%>
+	</div>
+	<div class="text-center">
+		<%= newpost.label :description %>
+		<%= newpost.text_field :description, :required => true%>
+	</div>
+	<div class="text-center">
+		<%= newpost.label :image %>
+		<%= newpost.text_field :image, :required => true%>
+	</div>
+	<div class="text-center">
+		<%= newpost.submit %>
+	</div>
 
 <% end %>

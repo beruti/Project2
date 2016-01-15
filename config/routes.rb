@@ -2,17 +2,11 @@ Rails.application.routes.draw do
 
   get '/posts/build'
 
-  get 'secret/public_info'
-
-  get 'secret/secret'
-
   resources :charges
 
   resources :posts
 
   resources :users, only: [:new, :index, :create, :edit, :update, :destroy]
-
-  #delete "/posts/:id", to: 'posts#destroy'
 
   get 'login', to: 'sessions#new'
   
@@ -22,13 +16,12 @@ Rails.application.routes.draw do
 
   get '/posts/:id/like', to: 'posts#like_post'
 
-  #create a home page for the user
+  #create a home page for the user with custom method home
   get '/users/:id/home', to: 'users#home'
 
   post '/posts/:id/archive', to: 'posts#archived', as: :archive
 
   post '/posts/:id/unarchive', to: 'posts#unarchived', as: :unarchive
-
 
   root 'sessions#new'
 
