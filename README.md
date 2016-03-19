@@ -7,57 +7,61 @@
 <h4>Technical Requirements</h4>
 
 Your app must:
-
-• Have at least 2 models (more if they make sense) – one representing someone using your application, and one that represents the main functional idea for your app
-• Include sign up/log in functionality, with encrypted passwords & an authorization flow
-• Have complete RESTful routes for at least one of your resources with GET, POST, PUT, PATCH, and DELETE
-• Utilize an ORM to create a database table structure and interact with your relationally-stored data
-• Include wireframes that you designed during the planning process
-• Have semantically clean HTML and CSS
-• Be deployed online and accessible to the public
+<ul>
+<li> Have at least 2 models (more if they make sense) – one representing someone using your application, and one that represents the main functional idea for your app</li>
+<li> Include sign up/log in functionality, with encrypted passwords & an authorization flow</li>
+<li> Have complete RESTful routes for at least one of your resources with GET, POST, PUT, PATCH, and DELETE</li>
+<li> Utilize an ORM to create a database table structure and interact with your relationally-stored data</li>
+<li>Include wireframes that you designed during the planning process</li>
+<li>Have semantically clean HTML and CSS</li>
+<li>Be deployed online and accessible to the public</li>
+</ul>
 
 <h4>Necessary Deliverables</h4>
-
-• A working full-stack application, built by you, hosted somewhere on the internet
-• A link to your hosted working app in the URL section of your Github repo
-• A git repository hosted on Github, with a link to your hosted project, and frequent commits dating • back to the very beginning of the project. Commit early, commit often.
-• A readme.md file with explanations of the technologies used, the approach taken, installation • instructions, unsolved problems, etc.
-• Wireframes of your app, hosted somewhere & linked in your readme
-• A link in your readme.md to the publically-accessible user stories you created ## Description
+<ul>
+<li> A working full-stack application, built by you, hosted somewhere on the internet</li>
+<li> A link to your hosted working app in the URL section of your Github repo</li>
+<li> A git repository hosted on Github, with a link to your hosted project, and frequent commits dating back to the very beginning of the project. Commit early, commit often.</li>
+<li> A readme.md file with explanations of the technologies used, the approach taken, installation  instructions, unsolved problems, etc.</li>
+<li>Wireframes of your app, hosted somewhere & linked in your readme</li>
+<li>A link in your readme.md to the publically-accessible user stories you created </li>
+</ul>
 
 <h4>User Stories</h4>
-• As a user I want to Login so I can use the site as my own
-• As a user I want to make posts in order to contribute to the community
-• As a user I want to pay/make a monetary contribution so I can help turn proposals into reality
-• As a user I want to vote to help decide in a fair way what projects will get built
-• As a user I want to be able to veto any idea so I don’t spend my precious time and money on an idea I don’t believe in
-
+<ul>
+<li> As a user I want to Login so I can use the site as my own</li>
+<li> As a user I want to make posts in order to contribute to the community</li>
+<li> As a user I want to pay/make a monetary contribution so I can help turn proposals into reality</li>
+<li> As a user I want to vote to help decide in a fair way what projects will get built</li>
+<li> As a user I want to be able to veto any idea so I don’t spend my precious time and money on an I don’t believe in </li>
+</ul>
 <h4>Technology Used</h4>
-
-• Partials (in views/layouts)
-• Sessions 
-• ActiveRecord as my ORM
-• Redirect
-• Path prefixes
-• Each statements –loops
-• Helper Methods and form helpers
-• Ordering by most likes
-• Unique likes by a user
-• Migrations – to add archiving possibility with an archive field of boolean data type
-• Javascript
-• HTML
-• Ruby
-• Active Record
-• Rails
-• SCSS
-• JQuery
-• JQuery - Animate
-• Google Fonts
-• Gems Used:-
+<ol>
+<li> Partials (in views/layouts)</li>
+<li> Sessions </li>
+<li> ActiveRecord as my ORM</li>
+<li> Redirect</li>
+<li> Path prefixes</li>
+<li> Each statements –loops</li>
+<li> Helper Methods and form helpers</li>
+<li> Ordering by most likes</li>
+<li> Unique likes by a user</li>
+<li> Migrations – to add archiving possibility with an archive field of boolean data type</li>
+<li> Javascript</li>
+<li> HTML</li>
+<li> Ruby</li>
+<li> Active Record</li>
+<li> Rails</li>
+<li> SCSS</li>
+<li> JQuery</li>
+<li> JQuery - Animate</li>
+<li> Google Fonts</li>
+<li> Gems Used:-</li>
 'rails' '4.2.5' 
 'bcrypt' 
 'stripe'
 'foundation-rails' 
+</ol>
 
 <h4>Improvements I Would Like To Make</h4>
 
