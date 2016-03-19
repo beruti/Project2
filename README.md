@@ -36,7 +36,7 @@ Your app must:
 <li> As a user I want to be able to veto any idea so I don’t spend my precious time and money on an I don’t believe in </li>
 </ul>
 <h4>Technology Used</h4>
-<ol>
+<ul>
 <li> Partials (in views/layouts)</li>
 <li> Sessions </li>
 <li> ActiveRecord as my ORM</li>
@@ -61,7 +61,7 @@ Your app must:
 'bcrypt' 
 'stripe'
 'foundation-rails' 
-</ol>
+</ul>
 
 <h4>Improvements I Would Like To Make</h4>
 
