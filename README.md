@@ -16,7 +16,7 @@ Your app must:
 • Have semantically clean HTML and CSS
 • Be deployed online and accessible to the public
 
-Necessary Deliverables
+<h4> Necessary Deliverables <h4>
 
 • A working full-stack application, built by you, hosted somewhere on the internet
 • A link to your hosted working app in the URL section of your Github repo
@@ -32,7 +32,7 @@ User Stories
 • As a user I want to vote to help decide in a fair way what projects will get built
 • As a user I want to be able to veto any idea so I don’t spend my precious time and money on an idea I don’t believe in
 
-Technology Used
+<h4>Technology Used</h4>
 
 • Partials (in views/layouts)
 • Sessions 
@@ -54,34 +54,18 @@ Technology Used
 • JQuery - Animate
 • Google Fonts
 • Gems Used:-
-<h4> 'rails' '4.2.5' </h4>
+'rails' '4.2.5' 
 'bcrypt' 
 'stripe'
 'foundation-rails' 
 
-
-
-
-Improvements You Would Like To Make
+<h4>Improvements I Would Like To Make</h4>
 
 - Make a super user
 - Style it properly
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Things you may want to cover:
+<!-- Things you may want to cover:
 
 * Ruby version
 
@@ -99,6 +83,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ... -->
 
 
