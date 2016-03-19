@@ -1,12 +1,10 @@
-== README
-
-The Idea
+<h4>The Idea</h4>
 
 - Cabin Collective will provide a home away from home 
 - It is an opportunity for those that wish to escape the city and take time away from technology to share quality moments with one another
 - Build it, Share it
 
-Technical Requirements
+<h4>Technical Requirements</h4>
 
 Your app must:
 
@@ -56,7 +54,7 @@ Technology Used
 • JQuery - Animate
 • Google Fonts
 • Gems Used:-
-'rails' '4.2.5'
+<h4> 'rails' '4.2.5' </h4>
 'bcrypt' 
 'stripe'
 'foundation-rails' 
