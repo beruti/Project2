@@ -16,7 +16,7 @@ Your app must:
 • Have semantically clean HTML and CSS
 • Be deployed online and accessible to the public
 
-<h4> Necessary Deliverables <h4>
+<h4>Necessary Deliverables</h4>
 
 • A working full-stack application, built by you, hosted somewhere on the internet
 • A link to your hosted working app in the URL section of your Github repo
@@ -25,7 +25,7 @@ Your app must:
 • Wireframes of your app, hosted somewhere & linked in your readme
 • A link in your readme.md to the publically-accessible user stories you created ## Description
 
-User Stories
+<h4>User Stories</h4>
 • As a user I want to Login so I can use the site as my own
 • As a user I want to make posts in order to contribute to the community
 • As a user I want to pay/make a monetary contribution so I can help turn proposals into reality
