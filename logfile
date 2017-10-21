@@ -1,0 +1,210 @@
+2017-10-21 16:44:03.239 BST [22138] LOG:  listening on IPv6 address "::1", port 5432
+2017-10-21 16:44:03.239 BST [22138] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2017-10-21 16:44:03.245 BST [22138] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2017-10-21 16:44:03.266 BST [22139] LOG:  database system was shut down at 2017-10-21 16:43:54 BST
+2017-10-21 16:44:03.271 BST [22138] LOG:  database system is ready to accept connections
+2017-10-21 16:44:07.670 BST [22158] FATAL:  database "ainnes" does not exist
+2017-10-21 16:44:57.813 BST [22587] FATAL:  database "ainnes" does not exist
+2017-10-21 16:57:18.501 BST [23248] ERROR:  syntax error at or near "DATABASE" at character 8
+2017-10-21 16:57:18.501 BST [23248] STATEMENT:  DELETE DATABASE mydb;
+2017-10-21 16:57:24.452 BST [23248] ERROR:  syntax error at or near "DESTROY" at character 1
+2017-10-21 16:57:24.452 BST [23248] STATEMENT:  DESTROY DATABASE mydb;
+2017-10-21 16:57:28.949 BST [23248] ERROR:  syntax error at or near "REMOVE" at character 1
+2017-10-21 16:57:28.949 BST [23248] STATEMENT:  REMOVE DATABASE mydb;
+2017-10-21 17:13:24.536 BST [24219] FATAL:  role "postgres" does not exist
+2017-10-21 17:13:43.413 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.413 BST [24232] STATEMENT:  ALTER TYPE mpaa_rating OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.414 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.414 BST [24232] STATEMENT:  ALTER DOMAIN year OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.415 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.415 BST [24232] STATEMENT:  ALTER FUNCTION public._group_concat(text, text) OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.415 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.415 BST [24232] STATEMENT:  ALTER FUNCTION public.film_in_stock(p_film_id integer, p_store_id integer, OUT p_film_count integer) OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.415 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.415 BST [24232] STATEMENT:  ALTER FUNCTION public.film_not_in_stock(p_film_id integer, p_store_id integer, OUT p_film_count integer) OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.417 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.417 BST [24232] STATEMENT:  ALTER FUNCTION public.get_customer_balance(p_customer_id integer, p_effective_date timestamp without time zone) OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.417 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.417 BST [24232] STATEMENT:  ALTER FUNCTION public.inventory_held_by_customer(p_inventory_id integer) OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.417 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.417 BST [24232] STATEMENT:  ALTER FUNCTION public.inventory_in_stock(p_inventory_id integer) OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.417 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.417 BST [24232] STATEMENT:  ALTER FUNCTION public.last_day(timestamp without time zone) OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.418 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.418 BST [24232] STATEMENT:  ALTER FUNCTION public.last_updated() OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.422 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.422 BST [24232] STATEMENT:  ALTER TABLE customer_customer_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.424 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.424 BST [24232] STATEMENT:  ALTER TABLE customer OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.425 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.425 BST [24232] STATEMENT:  ALTER FUNCTION public.rewards_report(min_monthly_purchases integer, min_dollar_amount_purchased numeric) OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.425 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.425 BST [24232] STATEMENT:  ALTER AGGREGATE public.group_concat(text) OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.429 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.429 BST [24232] STATEMENT:  ALTER TABLE actor_actor_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.430 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.430 BST [24232] STATEMENT:  ALTER TABLE actor OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.435 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.435 BST [24232] STATEMENT:  ALTER TABLE category_category_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.436 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.436 BST [24232] STATEMENT:  ALTER TABLE category OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.439 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.439 BST [24232] STATEMENT:  ALTER TABLE film_film_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.445 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.445 BST [24232] STATEMENT:  ALTER TABLE film OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.446 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.446 BST [24232] STATEMENT:  ALTER TABLE film_actor OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.446 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.446 BST [24232] STATEMENT:  ALTER TABLE film_category OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.449 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.449 BST [24232] STATEMENT:  ALTER TABLE actor_info OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.454 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.454 BST [24232] STATEMENT:  ALTER TABLE address_address_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.455 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.455 BST [24232] STATEMENT:  ALTER TABLE address OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.458 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.458 BST [24232] STATEMENT:  ALTER TABLE city_city_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.459 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.459 BST [24232] STATEMENT:  ALTER TABLE city OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.463 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.463 BST [24232] STATEMENT:  ALTER TABLE country_country_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.464 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.464 BST [24232] STATEMENT:  ALTER TABLE country OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.465 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.465 BST [24232] STATEMENT:  ALTER TABLE customer_list OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.467 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.467 BST [24232] STATEMENT:  ALTER TABLE film_list OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.471 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.471 BST [24232] STATEMENT:  ALTER TABLE inventory_inventory_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.472 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.472 BST [24232] STATEMENT:  ALTER TABLE inventory OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.476 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.476 BST [24232] STATEMENT:  ALTER TABLE language_language_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.477 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.477 BST [24232] STATEMENT:  ALTER TABLE language OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.478 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.478 BST [24232] STATEMENT:  ALTER TABLE nicer_but_slower_film_list OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.482 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.482 BST [24232] STATEMENT:  ALTER TABLE payment_payment_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.483 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.483 BST [24232] STATEMENT:  ALTER TABLE payment OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.487 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.487 BST [24232] STATEMENT:  ALTER TABLE rental_rental_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.488 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.488 BST [24232] STATEMENT:  ALTER TABLE rental OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.489 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.489 BST [24232] STATEMENT:  ALTER TABLE sales_by_film_category OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.493 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.493 BST [24232] STATEMENT:  ALTER TABLE staff_staff_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.499 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.499 BST [24232] STATEMENT:  ALTER TABLE staff OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.502 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.502 BST [24232] STATEMENT:  ALTER TABLE store_store_id_seq OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.503 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.503 BST [24232] STATEMENT:  ALTER TABLE store OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.505 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.505 BST [24232] STATEMENT:  ALTER TABLE sales_by_store OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.506 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.506 BST [24232] STATEMENT:  ALTER TABLE staff_list OWNER TO postgres;
+	
+	
+2017-10-21 17:13:43.942 BST [24232] ERROR:  role "postgres" does not exist
+2017-10-21 17:13:43.942 BST [24232] STATEMENT:  REVOKE ALL ON SCHEMA public FROM PUBLIC;
+	REVOKE ALL ON SCHEMA public FROM postgres;
+	GRANT ALL ON SCHEMA public TO postgres;
+	GRANT ALL ON SCHEMA public TO PUBLIC;
+	
+	
+	
