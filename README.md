@@ -67,7 +67,11 @@ Your app must:
 
 - Make a super user
 - Style it properly
+- Persist images uploaded via use of AWS S3 bucket
+- Design Build List
 
+<h5>Super User user stories</h5>
+- super user has RD of CRUD permissions from UI with regard to other users (can view and delete)
 
 <!-- Things you may want to cover:
 

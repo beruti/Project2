@@ -208,3 +208,7 @@
 	
 	
 	
+2017-10-21 19:31:32.475 BST [28138] LOG:  incomplete startup packet
+2017-10-21 19:39:56.891 BST [29035] FATAL:  database "man" does not exist
+2017-10-21 19:43:54.224 BST [29184] FATAL:  role "postgres" does not exist
+2017-10-21 19:44:19.071 BST [29200] FATAL:  role "postgres" does not exist
