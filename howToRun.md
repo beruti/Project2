@@ -1,6 +1,11 @@
 <h2>How to run Cabin Collective</h2>
 -add the following files to .gitignore
 
+<br />
+<h4>Updating the Heroku Hosted App</h4>
+heroku login
+<br />
+git push heroku master (from top-level folder of repo)
 
 bundle install <br />
 #to install all dependencies from Gemfile
